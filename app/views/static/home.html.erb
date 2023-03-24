@@ -1,15 +1,15 @@
 <h1>Static#home</h1>
 <p>Find me in app/views/static/home.html.erb</p>
 
-<div>
+<div class="py-2">
   <h2>JS will load an image here:</h2>
   <%= tag.div id: 'image', data: { controller: 'image-loader', 'image-loader-image-src-value' => image_path('bunny')} %>
 </div>
 
-<div>
+<div class="py-2">
   <h2>Here's where we'll load in a turbo-stream and use popper to display a tooltip</h2>
   <div id="turbo-test-drop">
     <%= link_to "load turbo stream", turbo_stream_demo_path, class: 'btn btn-sm btn-outline-primary', 'data-turbo-stream' => true %>
   </div>
-  <div><span><a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">this tooltip</a> should work, but it doesn't arrive via a turbo-stream</span></div>
+  <div><span><a href="#" data-popper-target="tooltip" data-bs-placement="bottom" data-bs-title="Default tooltip">this tooltip</a> should work, but it doesn't arrive via a turbo-stream</span></div>
 </div>
