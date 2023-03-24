@@ -1,0 +1,8 @@
+<span>I render a lot (<%= @times %>)</span>
+
+<ul class="list-group">
+  <% @times.times do |t| %>
+    <%= render partial: 'guid', locals: { color_num: t % 8 } %>
+    <% sleep 1 if t % 100 == 0 %>
+  <% end %>
+</ul>
