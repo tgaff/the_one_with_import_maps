@@ -1,5 +1,17 @@
-# Experiments
+# Overview
 
+This repo runs with:
+
+* rails 7
+* import maps
+
+## Usage
+
+1. `bundle install`
+2. `bundle exec rails s` 
+
+
+# Experiments & demos
 
 
 ## HTTP/2 server push
@@ -44,6 +56,8 @@ If you install [caddy](https://caddyserver.com/) it installs a system level cert
 
 #### h2o reverse proxy for HTTP/2
 
+> Note: I'm unable to see early-hints with h2o locally in curl.  It does work with caddy.  This may be a bug or an issue on my end.
+
 Similar to what was [done here](https://eileencodes.com/posts/http2-early-hints/).
 Setup an SSL cert and h2o.  Note you don't need to use the gems specified in that blog post but you do need a cert.
 
@@ -69,3 +83,12 @@ error-log: /usr/local/var/h2o/error-log
 2. run h2o: `h2o -c /usr/local/etc/h2o/h2o.conf`
 3. `curl -k -v https://localhost:9090`
 
+## Image loaded via JS
+
+This is to demonstrate the technique needed to gain access to an image in the JS side.  This varies in different Rails versions and depending on which JS / asset tools are in use.  
+
+In this case we inject the URL to the image into the page as a data attribute and retrieve it with Stimulus.
+
+## Stimulus backing popper.js for bootstrap tooltips
+
+This is mainly just demonstrating that Popper & Hotwire are setup and correctly configured.  Configuration varies a little based on the JS stack included.
