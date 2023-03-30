@@ -1,4 +1,3 @@
-import React from 'react';
 import { html } from 'htm/react';
 
 const DemoComponent = () => {
