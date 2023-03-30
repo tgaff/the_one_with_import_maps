@@ -14,3 +14,5 @@ pin "react", to: "https://ga.jspm.io/npm:react@18.2.0/index.js"
 pin "react-dom", to: "https://ga.jspm.io/npm:react-dom@18.2.0/index.js"
 pin "htm", to: "https://ga.jspm.io/npm:htm@3.1.1/dist/htm.module.js"
 pin "scheduler", to: "https://ga.jspm.io/npm:scheduler@0.23.0/index.js"
+
+pin_all_from "app/javascript/components", under: "components"

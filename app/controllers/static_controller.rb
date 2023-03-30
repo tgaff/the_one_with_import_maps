@@ -7,4 +7,7 @@ class StaticController < ApplicationController
       format.turbo_stream { render turbo_stream: turbo_stream.replace('turbo-test-drop', partial: 'turbo') }
     end
   end
+
+  def react
+  end
 end
