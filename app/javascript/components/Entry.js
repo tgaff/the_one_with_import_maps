@@ -1,6 +1,6 @@
 import { html } from 'htm/react';
-import DemoComponent from './DemoComponent';
-import CounterButton from './CounterButton';
+import DemoComponent from 'components/DemoComponent';
+import CounterButton from 'components/CounterButton';
 
 const Entry = () => {
 
